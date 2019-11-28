@@ -6,6 +6,7 @@
     </head>
     <body>
         <?php
+        set_include_path("/app");
     require_once('connection.php');
         //the following will check what has been sent in the GET request viewable in the url
     //if nothing is set, it will direct the user to pages/home.php
