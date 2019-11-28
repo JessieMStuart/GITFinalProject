@@ -1,6 +1,6 @@
 version: '3'
 services:
-  web:
+  web: 
     build: 
       context: ./web
       dockerfile: ./Dockerfile
@@ -8,3 +8,13 @@ services:
     - "3000:3000"
     volumes:
     - ./web:/app
+  mysql:
+    build:
+      context: ./mysql
+      dockerfile: ./Dockerfile
+    ports:
+    - "3306:3306"
+    volumes:
+    - ./mysql:/data
+    
+
